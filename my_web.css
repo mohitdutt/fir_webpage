@@ -1,0 +1,16 @@
+body{
+    background-color:darkslategrey;
+}
+.div_container{
+    margin-top:2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    border:1px solid lightgrey;
+    background-image: url("https://assets.awwwards.com/awards/media/cache/thumb_417_299/submissions/2017/07/597e6f0673337.jpg");
+    height:100%;
+}
+.div_1{
+     background-color:dimgrey !important;
+    
+}

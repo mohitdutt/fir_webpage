@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+           <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+
+           <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+     
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        
+           <script src='https://www.google.com/recaptcha/api.js'></script>
+        
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <link rel = "stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+        
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+        <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+           <link rel="stylesheet" type="text/css" href="new_page.css">
+       
+    </head>
+    <body ng-app = "myApp">
+        <div class = "container container1">
+            <br>
+        <form  class="ui form" name='myForm' action = "#" ng-controller = "myController" ng-submit = "submitForm($event)">
+             <div class = "row">
+                     <div class= "col-md-12">
+                     <div class="ui icon input div_1">
+                     <label for = "search">your_name</label>
+                     <input class = "input_1" type="text" name = "text" placeholder="your_name_please"  ng-model='form.text'>
+                     
+                     </div>
+                    </div>
+            
+            </div>
+            
+            <div class = "row">
+            
+                 <div class= "col-md-12">
+                     <div class="ui icon input" style = "margin-top:5px;width:57%;">
+                     <label for = "search">your_city</label>
+                     <input class = "input_1" type="text" name = "text" placeholder="your_dream_city_please"  ng-model='form.city'>
+                     
+                     </div>
+                    </div>
+                
+            </div>
+       
+             <div class = "row">
+            
+                 <div class= "col-md-12">
+                     <div class="ui icon input" style = "margin-top:5px;width:57%;">
+                     <label for = "search">what_do_uh_like_about_that</label>
+                     <input class = "input_1" type="text" name = "text" placeholder=""  ng-model='form.likes'>
+                     
+                     </div>
+                    </div>
+                
+            </div>
+        
+         <div class="ui divider divider"></div>
+        
+        
+        <div class = "row">
+            <div class = "col-md-9">
+                    <div class="g-recaptcha recaptche" data-sitekey="6Lf1mS4UAAAAAKtkPhVril2N7ME97FEMrvGSuGBG"></div>
+            </div></div>
+            <div class = "row">
+            <div class = "col-md-3">
+         
+<input class="ui button" type="submit" tabindex="0" id = "button" style = "margin-left:100px;">
+  
+                </div>
+            
+            </div>
+        </form>
+        </div>
+        <div class = "row">
+        <p id = "messi" style = "border:1px solid black;height:100px;">
+            </p>
+        </div>
+        
+        <script  type="text/javascript">
+                           
+         var app = angular.module("myApp", [])
+            .controller("myController" , [ "$scope" ,"$http", function($scope ,$http){ 
+                   
+                
+                 var formData = {
+        text: "default",
+                     city:"default"
+    };
+                $scope.save = function(){
+                    formData = $scope.form;
+                    
+                };
+                 $scope.submitForm = function($event) {
+                  $event.preventDefault()
+      alert( " umm welcome " + $scope.form.text +" on my_website " + " ohk then " + $scope.form.city + " is your dream city. ");
+                     setTimeout(function() { alert("thankuh so much for visiting my website     #mohit_dutt" ); }, 3000);
+                     document.getElementById("messi").innerHTML= ( $scope.form.text);
+                 
+        console.log($scope.form)
+                    
+                 };
+                
+                
+            }]);
+            
+           
+            
+            </script>
+        
+        
+    </body></html>
